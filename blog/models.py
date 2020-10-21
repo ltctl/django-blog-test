@@ -113,3 +113,7 @@ class Comment(models.Model):
     @property
     def display_url(self):
         return self.url
+
+
+class Blogger(models.Model):
+    info = models.JSONField(null=True, blank=True)
