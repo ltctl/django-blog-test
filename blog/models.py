@@ -117,3 +117,4 @@ class Comment(models.Model):
 
 class Blogger(models.Model):
     info = models.JSONField(null=True, blank=True)
+    description = models.HTMLField()
