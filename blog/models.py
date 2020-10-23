@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.postgres.fields import JSONField
+
 # Create your models here.
 
 
@@ -116,5 +118,4 @@ class Comment(models.Model):
 
 
 class Blogger(models.Model):
-    info = models.JSONField(null=True, blank=True)
-    description = models.HTMLField()
+    info = JSONField(null=True, blank=True)
